@@ -1,11 +1,11 @@
 ## importacion de datos
 ## i) de archivo txt
 
-Cavendish <- read.table("c:/Cavendish.txt", header=TRUE)
+Cavendish <- read.table("/home/ivan/Downloads/Cavendish.txt", header=TRUE)
 Cavendish
 summary(Cavendish)
 
-Cavendish <- read.table("f:/Cavendish.txt", header=TRUE)
+Cavendish <- read.table("/home/ivan/Downloads/Cavendish.txt", header=TRUE)
 Cavendish
 summary(Cavendish)
 plot(Cavendish)
@@ -38,7 +38,7 @@ mydat
 
 install.packages("readxl")
 library("readxl")
-b<-read_excel("C:/venta.xls",'Sheet1')
+b<-read_excel("/home/ivan/Downloads/venta.xls",'Sheet1')
 b
 
 
@@ -55,25 +55,25 @@ plot(x)
 hist(x)
 
 ###########################
-##Creación de un dataframe  ##  Los dataframes son una clase de objetos especial en R.
-##Normalmente, cuando se realiza un estudio estadístico sobre los sujetos u objetos de
-##una muestra, la información se organiza precisamente, en un dataframe: 
+##Creaci?n de un dataframe  ##  Los dataframes son una clase de objetos especial en R.
+##Normalmente, cuando se realiza un estudio estad?stico sobre los sujetos u objetos de
+##una muestra, la informaci?n se organiza precisamente, en un dataframe: 
 ## una hoja de datos, en los que cada fila corresponde a un sujeto y cada columna a una variable.
-##dataframe podemos incluir también datos alfanuméricos.  
+##dataframe podemos incluir tambi?n datos alfanum?ricos.  
 ## EJEMPLO
 edad <- c(22, 34, 29, 25, 30, 33, 31, 27, 25, 25)
 tiempo <- c(14.21, 10.36, 11.89, 13.81, 12.03, 10.99, 12.48, 13.37, 12.29, 11.92)
 sexo <- c("M","H","H","M","M","H","M","M","H","H")
 misDatos <- data.frame(edad,tiempo,sexo)
-misDatos
+ misDatos
 str(misDatos)    # Estructura de 'misDatos'
 names(misDatos)  # Nombre de las variables contenidas en 'misDatos'
 
 ##Acceso a variables dentro de un dataframe
 ##data.frames R dispone de algunas funciones 
 ##que facilitan la tarea de seleccionar o filtrar datos.
-##por ejemplo, si queremos ver sólo los datos de los 
-##sujetos (filas) 3 a 6, escribiríamos:
+##por ejemplo, si queremos ver s?lo los datos de los 
+##sujetos (filas) 3 a 6, escribir?amos:
 
 misDatos[3:6,]
 
@@ -82,11 +82,11 @@ misDatos[3:6,]
 
 misDatos[,1]
 
-##Aunque también podemos referirnos a la columna por su nombre:
+##Aunque tambi?n podemos referirnos a la columna por su nombre:
 
 misDatos$edad
 
-##Así pues, los siguientes comandos son equivalentes y dan el mismo resultado:
+##As? pues, los siguientes comandos son equivalentes y dan el mismo resultado:
 
 mean(misDatos[,1])
 mean(misDatos$edad)
@@ -97,8 +97,8 @@ mean(misDatos[["edad"]])
 
 ##deseamos construir tablas de frecuencias de cada una de las variables 
 ##que contiene, una tabla de frecuencias cruzadas para el nivel de estudios 
-##por sexo, y que además queremos calcular la edad medio de los individuos 
-##de cada sexo. La sintaxis a utilizar sería la siguiente:
+##por sexo, y que adem?s queremos calcular la edad medio de los individuos 
+##de cada sexo. La sintaxis a utilizar ser?a la siguiente:
 
 table(misDatos$estudios)
 table(misDatos$sexo)
@@ -109,18 +109,18 @@ mean(misDatos$edad[misDatos$sexo=="H"])
 
 
 ##escribir tantas veces misDatos resulta tedioso, al margen de que se multiplica
-## el riesgo de cometer errores en la redacción de los comandos.
+## el riesgo de cometer errores en la redacci?n de los comandos.
 ##Para evitar este problema podemos utilizar el comando attach(),
-##cuyo objetivo consiste básicamente en “enganchar” el contenido del dataframe
+##cuyo objetivo consiste b?sicamente en ?enganchar? el contenido del dataframe
 ## al entorno donde R busca los nombres de variable; de esta forma se puede 
 ##acceder directamente a las variables del dataframe por su nombre, 
-##sin necesidad de que éste tenga que ser precedido con el nombre del 
-##dataframe y el símbolo $; una vez que hayamos acabado nuestra tarea
-##desenganchamos” el dataframe con detach(). La tarea anterior, utilizando
+##sin necesidad de que ?ste tenga que ser precedido con el nombre del 
+##dataframe y el s?mbolo $; una vez que hayamos acabado nuestra tarea
+##desenganchamos? el dataframe con detach(). La tarea anterior, utilizando
 ## estos comandos, se puede llevar a cabo mediante:
 
 
-attach(misDatos)
+attach(misDatos) 
 #table(estudios)
 table(sexo)
 table(edad)
@@ -146,7 +146,7 @@ sexo[3]
 altura[3]
 datospoblacion<-data.frame(sexo, altura)
 datospoblacion
-datospoblacion[3,]
+datospoblacion[3,] 
 datospoblacion[3,2]
 datospoblacion[,2]
 datospoblacion[2]
@@ -194,7 +194,7 @@ pihat
 n
 pihat# es la estimacion
 
-###########
+###########kk
 mysuma<-function(x,y){
       x+y
 }
@@ -234,7 +234,7 @@ install.packages("dplyr")
 library(dplyr)
 
 #El paquete UsingR tiene instalado una base de dato de la maraton de
-#New York en el año 2002
+#New York en el a?o 2002
 # rescatamos esa base de datos llamando data
 
 data<-UsingR::nym.2002
