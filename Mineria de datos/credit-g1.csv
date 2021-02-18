@@ -49,4 +49,3 @@ checking_status,duration,credit_history,purpose,credit_amount,savings_status,emp
 0<=X<200,60,'existing paid',education,6288,<100,1<=X<4,4,'male single',none,4,'no known property',42,none,'for free',1,skilled,1,none,yes,bad
 >=200,30,'critical/other existing credit',radio/tv,3656,'no known savings',>=7,4,'male single',none,4,'life insurance',49,stores,own,2,'unskilled resident',1,none,yes,good
 0<=X<200,6,'existing paid',radio/tv,753,<100,1<=X<4,2,'female div/dep/mar',guarantor,3,'real estate',64,none,own,1,skilled,1,none,yes,good
-0<=X<200,6,'existing paid',radio/tv,753,<100,1<=X<4,2,'female div/dep/mar',guarantor,3,'real estate',64,none,own,1,skilled,1,none,yes,good
